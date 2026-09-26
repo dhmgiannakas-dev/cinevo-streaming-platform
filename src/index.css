@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* APP */
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* HOME */
+
+.home {
+  margin-left: 220px;
+  min-height: 100vh;
+}

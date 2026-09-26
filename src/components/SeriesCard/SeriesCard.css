@@ -1,0 +1,114 @@
+.tv-card {
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.tv-card-image {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #181818;
+}
+
+.tv-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.tv-card-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 16px;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.5) 45%,
+            transparent 75%);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tv-card:hover .tv-card-overlay {
+    opacity: 1;
+}
+
+.tv-card:hover img {
+    transform: scale(1.06);
+}
+
+.tv-card-overlay h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.tv-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    color: #d0d0d0;
+    font-size: 13px;
+}
+
+.tv-card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+/* star icon in tv card */
+.tv-card-meta svg {
+    font-size: 16px;
+}
+
+.tv-card-overlay p {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #b8b8b8;
+  font-size: 12px;
+  line-height: 1.4;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* =========================
+   NO POSTER
+========================= */
+
+.tv-card-no-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid #252525;
+  border-radius: 10px;
+
+  background: #181818;
+  color: #555;
+}
+
+.tv-card-no-poster .MuiSvgIcon-root {
+  font-size: 38px;
+}
+
+.tv-card-no-poster span {
+  font-size: 12px;
+  font-weight: 500;
+}

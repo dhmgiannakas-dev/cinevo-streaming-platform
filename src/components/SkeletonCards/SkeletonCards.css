@@ -1,0 +1,20 @@
+/* =========================
+   MOVIE CARD SKELETON
+========================= */
+
+.movie-card-skeleton {
+  width: 100%;
+}
+
+.movie-card-skeleton-poster.MuiSkeleton-root {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  aspect-ratio: 2 / 3;
+  border-radius: 10px;
+  background: #181818;
+}
+
+.movie-card-skeleton .MuiSkeleton-text {
+  background: #181818;
+}

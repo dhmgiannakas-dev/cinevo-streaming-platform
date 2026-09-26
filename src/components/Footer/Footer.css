@@ -1,0 +1,179 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  margin-left: 220px;
+
+  padding: 0 55px 35px;
+
+  background: #080808;
+  color: white;
+}
+
+.footer-content {
+  padding-top: 40px;
+
+  border-top: 1px solid #202020;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand {
+  margin-bottom: 28px;
+}
+
+.footer-brand h2 {
+  margin-bottom: 6px;
+
+  color: #39e75f;
+
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.footer-brand p {
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 24px;
+
+  margin-bottom: 35px;
+}
+
+.footer-nav a {
+  position: relative;
+
+  color: #a0a0a0;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #39e75f;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #181818;
+
+  color: #626262;
+
+  font-size: 11px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-tmdb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 5px;
+
+  max-width: 450px;
+
+  text-align: right;
+}
+
+.footer-tmdb span:first-child {
+  color: #8a8a8a;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) and (min-width: 601px) {
+  .footer {
+    margin-left: 80px;
+
+    padding: 0 35px 30px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .footer {
+    margin-left: 0;
+
+    padding: 0 20px 95px;
+  }
+
+  .footer-content {
+    padding-top: 30px;
+  }
+
+  .footer-brand {
+    margin-bottom: 24px;
+  }
+
+  .footer-brand h2 {
+    font-size: 20px;
+  }
+
+  .footer-nav {
+    gap: 18px;
+
+    margin-bottom: 28px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .footer-tmdb {
+    align-items: flex-start;
+
+    max-width: none;
+
+    text-align: left;
+
+    line-height: 1.5;
+  }
+}

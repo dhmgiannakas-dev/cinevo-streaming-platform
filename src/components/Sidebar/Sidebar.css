@@ -1,0 +1,184 @@
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  padding: 32px 24px;
+  background: rgba(8, 8, 8, 0.95);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+/* =========================
+   BRAND
+========================= */
+.logo {
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 165px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-nav a,
+.sidebar-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #a8a8a8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-bottom a:hover {
+  color: white;
+}
+
+.sidebar-nav a.nav-active,
+.sidebar-bottom a.nav-active {
+  color: #39e75f;
+}
+
+.sidebar-nav svg,
+.sidebar-bottom svg {
+  flex: none;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* =========================
+   COMPACT SIDEBAR
+========================= */
+@media (max-width: 1000px) and (min-width: 601px) {
+  .sidebar {
+    width: 80px;
+    padding: 32px 16px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    width: 165px;
+    max-width: none;
+    height: 48px;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    align-items: center;
+  }
+
+  .sidebar-nav a,
+  .sidebar-bottom a {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .sidebar-nav a span,
+  .sidebar-bottom a span {
+    display: none;
+  }
+}
+
+/* =========================
+   MOBILE BOTTOM NAV
+========================= */
+
+@media (max-width: 600px) {
+  .sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 65px;
+    padding: 6px 12px;
+
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+
+    background: rgba(8, 8, 8, 0.97);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 0;
+  }
+
+  .sidebar-bottom {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    margin-top: 0;
+  }
+
+  .sidebar-nav a,
+  .sidebar-bottom a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    font-size: 10px;
+  }
+
+  .sidebar-nav a svg,
+  .sidebar-bottom a svg {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,428 @@
+/* =========================
+   MY LIST PAGE
+========================= */
+
+.my-list-page {
+  min-height: 100vh;
+  margin-left: 220px;
+  padding: 70px 60px 100px;
+  background: #080808;
+  color: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.my-list-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.my-list-header h1 {
+  margin-bottom: 8px;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.my-list-header p {
+  color: #8f8f8f;
+  font-size: 15px;
+}
+
+.my-list-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.my-list-count {
+  padding: 7px 14px;
+  border: 1px solid #292929;
+  border-radius: 20px;
+  color: #a7a7a7;
+  font-size: 13px;
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.my-list-clear-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: transparent;
+  color: #a7a7a7;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.my-list-clear-btn svg {
+  font-size: 18px;
+}
+
+.my-list-clear-btn:hover {
+  border-color: #39e75f;
+  background: rgba(57, 231, 95, 0.08);
+  color: #39e75f;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.my-list-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 36px 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.my-list-card {
+  min-width: 0;
+  cursor: pointer;
+}
+
+.my-list-poster {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: #181818;
+}
+
+.my-list-poster img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.my-list-card:hover .my-list-poster img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   CARD OVERLAY
+========================= */
+
+.my-list-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    transparent 35%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.my-list-card:hover .my-list-card-overlay {
+  opacity: 1;
+}
+
+.my-list-remove-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(8, 8, 8, 0.85);
+  color: white;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.my-list-remove-btn:hover {
+  background: #39e75f;
+  color: #080808;
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   CARD INFO
+========================= */
+
+.my-list-card-info h2 {
+  margin-bottom: 8px;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.my-list-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8f8f8f;
+  font-size: 12px;
+}
+
+.my-list-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.my-list-rating svg {
+  color: #39e75f;
+  font-size: 15px;
+}
+
+.my-list-type {
+  padding: 3px 7px;
+  border: 1px solid #303030;
+  border-radius: 4px;
+  color: #b5b5b5;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   POSTER PLACEHOLDER
+========================= */
+
+.my-list-poster-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 13px;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.my-list-empty {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.my-list-empty-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 2px solid #39e75f;
+  border-radius: 50%;
+  color: #39e75f;
+  font-size: 38px;
+  font-weight: 300;
+}
+
+.my-list-empty h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.my-list-empty p {
+  max-width: 390px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   EMPTY STATE CTA
+========================= */
+
+.my-list-browse-btn.MuiButton-root {
+  margin-top: 24px;
+
+  padding: 11px 24px;
+
+  border-radius: 7px;
+
+  background: #39e75f;
+  color: #080808;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
+
+  box-shadow: 0 6px 22px rgba(57, 231, 95, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.my-list-browse-btn.MuiButton-root:hover {
+  background: #4df16f;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 28px rgba(57, 231, 95, 0.28);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1200px) {
+  .my-list-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 601px) {
+  .my-list-page {
+    margin-left: 80px;
+    padding: 60px 40px 80px;
+  }
+
+  .my-list-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 18px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .my-list-page {
+    min-height: calc(100vh - 65px);
+    margin-left: 0;
+    padding: 35px 20px 100px;
+  }
+
+  .my-list-header {
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .my-list-header h1 {
+    font-size: 32px;
+  }
+
+  .my-list-header p {
+    font-size: 13px;
+  }
+
+  .my-list-header-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .my-list-count {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .my-list-clear-btn {
+    padding: 6px 9px;
+    font-size: 11px;
+  }
+
+  .my-list-clear-btn svg {
+    font-size: 16px;
+  }
+
+  .my-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 12px;
+  }
+
+  .my-list-card-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      transparent 35%
+    );
+  }
+
+  .my-list-remove-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .my-list-remove-btn svg {
+    font-size: 19px;
+  }
+
+  .my-list-card-info h2 {
+    font-size: 13px;
+  }
+
+  .my-list-card-meta {
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .my-list-type {
+    padding: 2px 5px;
+    font-size: 9px;
+  }
+
+  .my-list-empty {
+    min-height: 50vh;
+  }
+
+  .my-list-empty-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .my-list-empty h2 {
+    font-size: 22px;
+  }
+}

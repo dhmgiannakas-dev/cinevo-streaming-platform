@@ -1,0 +1,159 @@
+/* =========================
+   PAGE
+========================= */
+
+.not-found {
+  min-height: 100vh;
+
+  margin-left: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(57, 231, 95, 0.08) 0%,
+      transparent 45%
+    ),
+    #080808;
+
+  color: white;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.not-found-content {
+  width: 100%;
+  max-width: 650px;
+
+  text-align: center;
+}
+
+.not-found-code {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #39e75f;
+
+  font-size: clamp(100px, 15vw, 180px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -8px;
+
+  opacity: 0.95;
+
+  text-shadow: 0 0 50px rgba(57, 231, 95, 0.18);
+}
+
+.not-found-label {
+  margin-bottom: 18px;
+
+  color: #39e75f;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.not-found-content h1 {
+  margin-bottom: 16px;
+
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.not-found-description {
+  max-width: 500px;
+
+  margin: 0 auto 30px;
+
+  color: #999;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.not-found-btn.MuiButton-root {
+  padding: 11px 24px;
+
+  border-radius: 7px;
+
+  background: #39e75f;
+  color: #080808;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
+
+  box-shadow: 0 6px 22px rgba(57, 231, 95, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.not-found-btn.MuiButton-root:hover {
+  background: #4df16f;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 28px rgba(57, 231, 95, 0.28);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) and (min-width: 601px) {
+  .not-found {
+    margin-left: 80px;
+
+    padding: 40px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  body .not-found {
+    min-height: calc(100svh - 65px);
+
+    margin-left: 0;
+
+    padding: 40px 20px 90px;
+  }
+
+  .not-found-code {
+    font-size: 110px;
+    letter-spacing: -5px;
+  }
+
+  .not-found-content h1 {
+    font-size: 30px;
+  }
+
+  .not-found-description {
+    font-size: 14px;
+  }
+}
