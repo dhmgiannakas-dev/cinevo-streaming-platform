@@ -6,6 +6,32 @@ The application uses real data from the TMDB API and allows users to discover mo
 
 The project was built with a focus on reusable components, responsive design, API integration, state management, and a polished streaming-platform user experience.
 
+## 🔗 Live Demo
+
+**Live Website:** https://cinevo-streaming-platform.vercel.app/
+
+**GitHub Repository:** https://github.com/dhmgiannakas-dev/cinevo-streaming-platform
+
+---
+
+## 📸 Screenshots
+
+### Home
+
+![CINEVO Home](./screenshots/home.png)
+
+### Movies
+
+![CINEVO Movies](./screenshots/movies.png)
+
+### Movie Details
+
+![CINEVO Movie Details](./screenshots/movie-details.png)
+
+### Mobile
+
+![CINEVO Mobile](./screenshots/mobile.png)
+
 ---
 
 ## ✨ Features
@@ -23,14 +49,14 @@ The project was built with a focus on reusable components, responsive design, AP
 - Recommended content
 - Personal **My List** watchlist
 - Persistent watchlist using Local Storage
-- User settings with persistent preferences
+- Persistent user settings
 - Trailer autoplay preference
 - Reduced motion accessibility option
 - Adult content preference
 - Loading, error, and empty states
 - Custom 404 page
 - Responsive navigation
-- Fully responsive desktop, tablet, and mobile layouts
+- Desktop, tablet, and mobile layouts
 
 ---
 
@@ -45,6 +71,7 @@ The project was built with a focus on reusable components, responsive design, AP
 - **TMDB API**
 - **Context API**
 - **Local Storage**
+- **Vercel**
 
 ---
 
@@ -54,12 +81,12 @@ Building CINEVO helped me improve my understanding of:
 
 - Structuring a larger React application
 - Creating reusable React components
-- Working with multiple API endpoints
+- Working with multiple REST API endpoints
 - Handling asynchronous requests with `async/await`
 - Managing loading and error states
 - Cancelling requests with `AbortController`
 - Fetching multiple resources with `Promise.all`
-- Building reusable API utilities
+- Building a reusable API utility
 - Managing global state with React Context
 - Persisting application state with Local Storage
 - Creating controlled settings and UI preferences
@@ -68,47 +95,9 @@ Building CINEVO helped me improve my understanding of:
 - Conditional rendering
 - Responsive layouts for multiple screen sizes
 - Building modal interactions and keyboard controls
-- Improving accessibility and reduced-motion support
-- Organizing data into consistent structures across movies and TV series
-
----
-
-## 📱 Responsive Design
-
-CINEVO is designed to work across different screen sizes.
-
-### Desktop
-A full sidebar navigation and multi-column content layouts.
-
-### Tablet
-A compact sidebar with responsive grids and horizontally scrollable filters.
-
-### Mobile
-A bottom navigation bar, two-column content grids, touch-friendly controls, and layouts optimized for smaller screens.
-
----
-
-## ⚙️ Settings
-
-CINEVO includes persistent user preferences through the Settings page.
-
-Users can control:
-
-- **Autoplay Trailers**
-- **Reduced Motion**
-- **Include Adult Content**
-
-Settings are stored locally in the browser and remain available after refreshing the application.
-
----
-
-## ❤️ My List
-
-Users can add movies and TV series to their personal watchlist.
-
-The list is managed globally using React Context and persisted with Local Storage.
-
-Movies and series are uniquely identified using both their ID and media type, allowing different content types to be managed consistently.
+- Improving accessibility with reduced-motion support
+- Normalizing movie and TV series data into consistent structures
+- Deploying a React SPA and configuring routing for production
 
 ---
 
@@ -130,7 +119,7 @@ The search system includes:
 
 ## 🎥 Movie & Series Details
 
-Each movie or series has a dedicated details page containing relevant information such as:
+Each movie or series has a dedicated details page with information such as:
 
 - Overview
 - Rating
@@ -142,13 +131,55 @@ Each movie or series has a dedicated details page containing relevant informatio
 - Recommendations
 - My List controls
 
-Trailer data is loaded on demand from TMDB and displayed through YouTube.
+Trailer data is retrieved from TMDB and displayed through YouTube.
 
 ---
 
-## 🌐 API
+## ❤️ My List
 
-CINEVO uses the **TMDB API** to retrieve movie and TV series data.
+Users can add movies and TV series to their personal watchlist.
+
+The list is managed globally using React Context and persisted with Local Storage, allowing it to remain available after refreshing or reopening the application.
+
+Movies and series are uniquely identified using both their ID and media type.
+
+---
+
+## ⚙️ Settings
+
+CINEVO includes persistent user preferences through the Settings page.
+
+Users can control:
+
+- **Autoplay Trailers**
+- **Reduced Motion**
+- **Include Adult Content**
+
+Settings are managed through React Context and stored locally in the browser.
+
+---
+
+## 📱 Responsive Design
+
+CINEVO is designed for desktop, tablet, and mobile devices.
+
+### Desktop
+
+Full sidebar navigation, large hero sections, content rows, and multi-column grids.
+
+### Tablet
+
+Compact sidebar navigation, responsive content grids, and horizontally scrollable genre filters.
+
+### Mobile
+
+Bottom navigation, two-column content grids, touch-friendly controls, and layouts optimized for smaller screens.
+
+---
+
+## 🌐 TMDB API
+
+CINEVO uses the TMDB API to retrieve movie and TV series data.
 
 API requests are handled through a reusable `tmdbFetch` utility.
 
@@ -169,13 +200,13 @@ VITE_TMDB_TOKEN=your_tmdb_token
 Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/dhmgiannakas-dev/cinevo-streaming-platform.git
 ```
 
 Move into the project directory:
 
 ```bash
-cd cinevo
+cd cinevo-streaming-platform
 ```
 
 Install dependencies:
@@ -184,7 +215,7 @@ Install dependencies:
 npm install
 ```
 
-Create a `.env` file and add your TMDB token:
+Create a `.env` file in the project root:
 
 ```env
 VITE_TMDB_TOKEN=your_tmdb_token
@@ -204,44 +235,37 @@ npm run build
 
 ---
 
-## 📦 Main Dependencies
+## 📁 Project Structure
 
 ```text
-React
-React Router
-Material UI
-Emotion
-MUI Icons
+src/
+├── api/
+├── assets/
+├── components/
+├── context/
+├── pages/
+├── App.jsx
+└── main.jsx
 ```
 
----
-
-## 🔗 Live Demo
-
-**Live Website:** YOUR_VERCEL_URL
-
-**GitHub Repository:** YOUR_GITHUB_REPOSITORY_URL
+The application separates reusable UI components, page-level components, global contexts, and API logic to keep the codebase organized and maintainable.
 
 ---
 
-## 📸 Screenshots
+## 🚀 Deployment
 
-### Home
-Add your Home page screenshot here.
+CINEVO is deployed on Vercel.
 
-### Movies
-Add your Movies page screenshot here.
+The application includes SPA routing configuration so React Router routes can be accessed and refreshed directly in production.
 
-### Details
-Add your Movie Details page screenshot here.
-
-### Mobile
-Add your mobile screenshot here.
+Production environment variables are configured through Vercel and are not committed to the repository.
 
 ---
 
 ## 👨‍💻 Author
 
-Built as a frontend portfolio project.
+**DhmGiannakas Dev**
 
-CINEVO demonstrates practical experience with React, REST APIs, routing, global state, persistent browser storage, responsive design, and reusable component architecture.
+GitHub: https://github.com/dhmgiannakas-dev
+
+Built as a frontend portfolio project to demonstrate practical experience with React, REST APIs, routing, global state, persistent browser storage, responsive design, reusable component architecture, and production deployment.
